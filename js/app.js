@@ -35,7 +35,7 @@ function multiply(a, b) { //eslint-disable-line
 }
 
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
+testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -52,11 +52,21 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+  let sum1Answer = sum(a, b);
+  let sum2Answer = sum1Answer[0];
 
+  let mult2Answer = multiply(a, b);
+  let mult3Answer = mult2Answer[0];
+
+  let sumNo = sum(sum2Answer, c);
+  let productNo = multiply(mult3Answer, c);
+  let message3 = `${a} and ${b} and ${c} sum to ${sumNo[0]}.`;
+  let message4 = `The product of ${a} and ${b} and ${c} is ${productNo[0]}.`;
+  return [sumNo[0], productNo[0], message3, message4];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
